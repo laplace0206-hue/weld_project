@@ -1,0 +1,66 @@
+project:
+  name: weld_defect_research
+  output_dir: runs/weld_defect_research
+
+dataset:
+  config_path: configs/dataset.yaml
+
+model:
+  baseline_name: yolov8s.pt
+  image_size: 960
+  use_adaptive_preprocess: true
+  use_enhanced_fpn: true
+  use_attention: true
+  loss_type: focal_eiou
+  attention_type: ema
+  neck_type: bi_fpn_lite
+
+train:
+  epochs: 100
+  batch: 8
+  workers: 4
+  device: auto
+  optimizer: auto
+  lr0: 0.001
+  patience: 30
+  pretrained: true
+  cache: false
+  amp: true
+  close_mosaic: 10
+
+eval:
+  split: val
+  conf: 0.25
+  iou: 0.5
+
+export:
+  format: onnx
+  imgsz: 960
+  dynamic: true
+
+ablation:
+  baseline:
+    preprocess: false
+    neck: false
+    attention: false
+    loss: ciou
+  preprocess:
+    preprocess: true
+    neck: false
+    attention: false
+    loss: ciou
+  neck:
+    preprocess: true
+    neck: true
+    attention: false
+    loss: ciou
+  attention:
+    preprocess: true
+    neck: true
+    attention: true
+    loss: ciou
+  full:
+    preprocess: true
+    neck: true
+    attention: true
+    loss: focal_eiou

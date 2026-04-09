@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src",
+    "scripts"
+  ],
+  "extraPaths": [
+    "src"
+  ],
+  "venvPath": "D:/miniconda/envs",
+  "venv": "machine",
+  "pythonVersion": "3.11"
+}

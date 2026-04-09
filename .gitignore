@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.conda/
+.ultralytics/
+venv/
+.env
+runs/
+outputs/
+artifacts/
+*.pt
+*.onnx
+*.engine
+.ipynb_checkpoints/

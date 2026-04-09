@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "D:/miniconda/envs/machine/python.exe",
+  "python.analysis.extraPaths": [
+    "./src"
+  ],
+  "python.autoComplete.extraPaths": [
+    "./src"
+  ],
+  "python.analysis.typeCheckingMode": "basic"
+}

@@ -1,0 +1,11 @@
+dataset_root: ../1
+source_yaml: ../1/data.yaml
+train_images: ../1/train/images
+val_images: ../1/valid/images
+test_images: ../1/test/images
+class_names:
+  - Crack
+  - Porosity
+  - Spatters
+  - Welding line
+num_classes: 4
