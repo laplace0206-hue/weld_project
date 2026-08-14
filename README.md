@@ -25,6 +25,7 @@
 1. 安装依赖
 
 ```powershell
+#python>=3.9.0
 pip install -r requirements.txt
 ```
 
